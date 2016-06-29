@@ -25,7 +25,7 @@ Replace "extract directory" to your Songs folder in your osu! directory.
 4. Have fun with Osu! ( Great game by the way :) )
 
 # FAQ
-- Q: Why creating this?
+- Q: Why create this?
 - A : Well, The extraction achrive program in my os (Lubuntu) doesn't create the folder after you extracted the file and extract the multiple beatmaps is painful- -.
 
 - Q: But Osu! didn't support linux natively, Are you using [Wine](https://www.winehq.org/)?
