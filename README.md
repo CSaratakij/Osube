@@ -40,3 +40,6 @@ Replace "extract directory" to your Songs folder in your osu! directory.
 - [x] Extract multiple beatmaps.
 - [x] Auto remove beatmaps when successful extracted.
 - [x] Add Optional to keep beatmaps after extraction.
+
+#License
+- [MIT](LICENSE)
