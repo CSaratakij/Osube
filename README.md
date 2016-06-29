@@ -1,5 +1,5 @@
 # Osube
-Extract multiple [Osu!](https://osu.ppy.sh/)'s beatmap (.osz)
+Extract multiple [Osu!](https://osu.ppy.sh/)'s beatmaps (.osz)
 
 # Note
 - This is a command line program.
