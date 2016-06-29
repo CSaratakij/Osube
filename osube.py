@@ -89,9 +89,9 @@ def run():
                     fail_list.append(item)
 
 
-            #Remove the beatmaps archive if user doesn't trigger keep option. (-k), (--keep)
             is_keep_beatmaps = ("-k" in sys.argv) or ("--keep" in sys.argv)
 
+            #Remove the beatmaps archive if user doesn't trigger keep option. (-k), (--keep)
             if not is_keep_beatmaps:
                 for item in beatmaps:
                     os.remove(item)
