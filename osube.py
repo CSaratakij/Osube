@@ -99,6 +99,10 @@ def run():
                 print()
                 print()
 
+            #Prevent ternimal from immediatly close
+            input("Enjoy! your beatmaps :)")
+            print()
+
     else:
         print()
         print("Please specify extract directory.\t\t:(")
