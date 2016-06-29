@@ -26,11 +26,12 @@ Replace "extract directory" to your Songs folder in your osu! directory.
 
 # FAQ
 - Q: Why create this?
-- A : Well, The extraction achrive program in my os (Lubuntu) doesn't create the folder after you extracted the file and extract the multiple beatmaps is painful- -.
+- A : Well, The extraction achrive program in my OS (Lubuntu) doesn't create the folder after you extracted the file. Osu! Beatmaps need to make a one parent folder before extract the beatmaps and extracting the multiple beatmaps by hand is painful- -.
 
-- Q: But Osu! didn't support linux natively, Are you using [Wine](https://www.winehq.org/)?
+- Q: But Osu! doesn't support linux natively, Are you using [Wine](https://www.winehq.org/)?
 - A : Wine is awesome but I prefer not to use it anymore. There's a alternative Osu! Client in desktop, It's call [Opsu!](https://itdelatrisu.github.io/opsu/).
 
 # Todo List
 - [x] Extract multiple beatmaps.
 - [ ] Auto remove beatmaps when successful extracted.
+- [ ] Add Optional to keep beatmaps after extraction.
