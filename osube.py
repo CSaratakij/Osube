@@ -25,12 +25,30 @@ def help():
     print("\t|            Extract Osu! Beatmap          |")
     print("\t|__________________________________________|")
     print("\t|                                          |")
-    print("\t|         osube [extract directory]        |")
+    print("\t|        osube [ extract directory ]       |")
     print("\t|       osube /home/username/osu/Songs     |")
     print("\t|__________________________________________|")
     print("\t|                                          |")
     print("\t| Run this command in the folder that have |")
     print("\t|         .osz file to extract.            |")
+    print("\t|__________________________________________|")
+    print()
+    print()
+    print("\t __________________________________________")
+    print("\t|                                          |")
+    print("\t|            Keep Osu! Beatmap             |")
+    print("\t|__________________________________________|")
+    print("\t|                                          |")
+    print("\t|      osube -k [ extract directory ]      |")
+    print("\t|    osube --keep [ extract directory ]    |")
+    print("\t|__________________________________________|")
+    print("\t|                                          |")
+    print("\t|  By default, osube will remove beatmaps  |")
+    print("\t|             after extracted.             |")
+    print("\t|__________________________________________|")
+    print("\t|                                          |")
+    print("\t|      Add [-k, --keep] flag to keep       |")
+    print("\t|        beatmaps after extracted.         |")
     print("\t|__________________________________________|")
     print()
     print()
@@ -51,11 +69,14 @@ def run():
             beatmaps = []
             success_list = []
             fail_list = []
+            is_keep_beatmaps = False
+
 
             #Retreive .osz file in current directory
             for item in current_dir_items:
                 if re.match(beatmap_pattern, item, re.M | re.I | re.U):
                     beatmaps.append(item)
+
 
             #Extract all .osz file to specify directory
             for item in beatmaps:
@@ -68,6 +89,14 @@ def run():
                     fail_list.append(item)
 
 
+            #Remove the beatmaps archive if user doesn't trigger keep option. (-k), (--keep)
+            is_keep_beatmaps = ("-k" in sys.argv) or ("--keep" in sys.argv)
+
+            if not is_keep_beatmaps:
+                for item in beatmaps:
+                    os.remove(item)
+
+
             #Show extract result
             print()
             print()
@@ -78,9 +107,12 @@ def run():
             print("\tFail : ", len(fail_list))
             print("\tSuccess : ", len(success_list))
             print()
+            print("\tKeep beatmaps : ", is_keep_beatmaps)
+            print()
             print("\tFrom : ", current_dir)
             print("\tTo : ", extract_dir)
             print()
+
 
             #List the beatmap that successful extracted
             if (len(success_list) > 0):
@@ -89,6 +121,7 @@ def run():
                 for item in success_list:
                     print("\t\t- ", item)
                 print()
+
 
             #List the beatmap that unsuccessful extracted
             if (len(fail_list) > 0):
@@ -99,8 +132,12 @@ def run():
                 print()
                 print()
 
-            #Prevent ternimal from immediatly close
-            input("Enjoy! your beatmaps :)")
+
+            #Prevent terminal from immediatly close
+            print()
+            print("Enjoy! your beatmaps \t:)")
+            input("Press enter to quit ")
+            print()
             print()
 
     else:

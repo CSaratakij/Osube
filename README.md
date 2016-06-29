@@ -14,9 +14,14 @@ You can use program in these ways.
 3. Set this program in your environment. In case of linux, edit your /etc/environment ( edit with sudo :) )
 
 # To Use Program
-Command :
+####Command :
+- Extract without keep beatmap archives (.osz)
 ```
 python osube.py [extract directory]
+```
+- Extract and keep beatmap archives (.osz)
+```
+python osube.py -k [extract directory]
 ```
 1. Run this program in the folder that have osu!'s beatmaps file (.osz)
 2. Make sure you specify the extract folder. (It's a 2nd command line argument)
@@ -33,5 +38,5 @@ Replace "extract directory" to your Songs folder in your osu! directory.
 
 # Todo List
 - [x] Extract multiple beatmaps.
-- [ ] Auto remove beatmaps when successful extracted.
-- [ ] Add Optional to keep beatmaps after extraction.
+- [x] Auto remove beatmaps when successful extracted.
+- [x] Add Optional to keep beatmaps after extraction.
