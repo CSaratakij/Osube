@@ -15,7 +15,7 @@ You can use program in these ways.
 
 # To Use Program
 ####Command :
-- Extract without keep beatmap archives (.osz)
+- Extract without keeping beatmap archives (.osz)
 ```
 python osube.py [extract directory]
 ```
