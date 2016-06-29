@@ -21,7 +21,7 @@ python osube.py [extract directory]
 ```
 - Extract and keep beatmap archives (.osz)
 ```
-python osube.py -k [extract directory]
+python osube.py [extract directory] -k
 ```
 1. Run this program in the folder that have osu!'s beatmaps file (.osz)
 2. Make sure you specify the extract folder. (It's a 2nd command line argument)
