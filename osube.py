@@ -73,12 +73,16 @@ def run():
 
 
             #Retreive .osz file in current directory
+            print("Retreive .osz file...")
+
             for item in current_dir_items:
                 if re.match(beatmap_pattern, item, re.M | re.I | re.U):
                     beatmaps.append(item)
 
 
             #Extract all .osz file to specify directory
+            print("Extracting...")
+
             for item in beatmaps:
                 if zipfile.is_zipfile(item):
                     with ZipFile(item) as beatmap:
