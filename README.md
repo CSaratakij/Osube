@@ -14,6 +14,11 @@ Extract multiple [Osu!](https://osu.ppy.sh/)'s beatmaps (.osz)
 ```sh
 ./osube.py ExtractDir -k
 ```
+- Extract 'ABC.osz' to 'ExtractDir' and keep .osz file
+```sh
+./osube.py ABC.osz ExtractDir -k
+```
+
 
 # License
 - [MIT](LICENSE)
