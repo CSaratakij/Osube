@@ -43,7 +43,8 @@ def run():
         if zipfile.is_zipfile(item):
             with ZipFile(item) as file:
                 folder_name = re.sub(r".osz", "", item)
-                file.extractall(extract_dir + "/" + folder_name)
+                base_name = os.path.basename(folder_name)
+                file.extractall(extract_dir + "/" + base_name)
                 success_files.append(item)
         else:
             fail_files.append(item)
