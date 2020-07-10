@@ -1,5 +1,5 @@
 # Osube
-Extract multiple [Osu!](https://osu.ppy.sh/)'s beatmaps (.osz)
+- Extract multiple [Osu!](https://osu.ppy.sh/)'s beatmaps (.osz)
 
 # Dependencies
 - python3
