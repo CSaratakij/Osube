@@ -19,10 +19,13 @@ Extract multiple [Osu!](https://osu.ppy.sh/)'s beatmaps (.osz)
 ./osube.py ABC.osz ExtractDir -k
 ```
 
-# Linux users
-- To better intregate with linux, we will add the custom mimetype for the
-osu beatmap
-
+# For Linux user
+- To better intregate with linux, we will add the custom mimetype for the osu beatmap.
+The file manager will recognize the new file type and run osube to extract our beatmap.
+Please do the following
+1. Modify 'osube.desktop' to extract to your osu! Song directory.
+2. run 'linux-intregate.sh' script.
+3. Enjoy :D
 
 # License
 - [MIT](LICENSE)
