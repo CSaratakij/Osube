@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+    <mime-type type="application/x-osubeatmap">
+        <comment>Osu beatmap</comment>
+        <icon name="application-x-osubeatmap"/>
+        <glob-deleteall/>
+        <glob pattern="*.osz"/>
+    </mime-type>
+</mime-info>

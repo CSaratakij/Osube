@@ -19,6 +19,11 @@ Extract multiple [Osu!](https://osu.ppy.sh/)'s beatmaps (.osz)
 ./osube.py ABC.osz ExtractDir -k
 ```
 
+# Linux users
+- To better intregate with linux, we will add the custom mimetype for the
+osu beatmap
+
 
 # License
 - [MIT](LICENSE)
+

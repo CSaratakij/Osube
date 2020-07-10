@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=true
+Name=Osube
+Comment=Osu! beatmaps extractor
+Exec=osube %F "--- Your osu song directory here ---"
+Icon=fooview
+MimeType=application/x-osubeatmap;
