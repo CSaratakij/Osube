@@ -30,7 +30,7 @@ Please do the following
 
 ### Osube-Watcher
 - To better extract beatmap without osu! direct, you need 'osube-watcher.sh'. It's a little shell script to detect .osz file in the directory.
-You can run this watcher in your default browser download directory (ex. ~/Download) and it will auto extract beatmap for you. (alias this to 'osube-watcher' is recommend)
+You can run this watcher in your default browser download directory (ex. ~/Download) and it will auto extract beatmap for you. (alias this to 'osube-watcher' is recommend) (need to alias osube.py to osube)
 
 ### dependencies
 - grep
