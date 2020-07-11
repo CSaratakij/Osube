@@ -7,16 +7,17 @@
 # Getting Started
 1. Clone this repository
 2. Make osube.py executable
-- (optional) add alias or create symbolic link for better usage.
+- (optional) add 'osube.py' to PATH environment variable, alias or create symbolic link for better usage.
 
 # Example
+assume we alias to 'osube'
 - Extract all .osz from current working directory to 'ExtractDir' and keep .osz file
 ```sh
-osube.py ExtractDir -k
+osube ExtractDir -k
 ```
 - Extract 'ABC.osz' to 'ExtractDir' and keep .osz file
 ```sh
-osube.py ABC.osz ExtractDir -k
+osube ABC.osz ExtractDir -k
 ```
 
 # For Linux user
