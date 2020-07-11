@@ -24,13 +24,22 @@
 The file manager will recognize the new file type and run osube to extract our beatmap.
 Please do the following
 1. Symbolic link 'osube.py' to 'osube' (example, link to /usr/local/bin)
-2. Modify 'osube.desktop' to make osube extract to the osu! Song directory.
+```sh
+sudo ln -s /path/to/osube.py /usr/local/bin/osube
+```
+2. Modify 'osube.desktop' to make osube extract to the osu! Song directory. (Inside the 'Exec' section)
+```
+Exec=osube %F "/absolute/path/to/osu/Song/Directory"
+```
 3. run 'linux-integration.sh' script.
 4. Enjoy :D
 
 ### Osube-Watcher
 - To better extract beatmap without osu! direct, you need 'osube-watcher.sh'. It's a little shell script to detect .osz file in the directory.
-You can run this watcher in your default browser download directory (ex. ~/Download) and it will auto extract beatmap for you. (alias this to 'osube-watcher' is recommend) (need to alias osube.py to osube)
+You can run this watcher in your default browser download directory (ex. ~/Download) and it will auto extract beatmap for you. Really handy when you download beatmap by a web browser.
+
+(need to alias or symbolic link 'osube.py' to 'osube')\
+(alias this to 'osube-watcher' is recommend)
 
 ### dependencies
 - grep
