@@ -12,11 +12,11 @@
 # Example
 - Extract all .osz from current working directory to 'ExtractDir' and keep .osz file
 ```sh
-./osube.py ExtractDir -k
+osube.py ExtractDir -k
 ```
 - Extract 'ABC.osz' to 'ExtractDir' and keep .osz file
 ```sh
-./osube.py ABC.osz ExtractDir -k
+osube.py ABC.osz ExtractDir -k
 ```
 
 # For Linux user
