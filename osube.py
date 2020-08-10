@@ -8,7 +8,7 @@ import argparse
 
 from zipfile import ZipFile
 
-BEATMAP_PATTERN = "(\w.+osz)" 
+BEATMAP_PATTERN = "(\w.+osz)"
 
 def is_name_valid(name):
     return re.match(BEATMAP_PATTERN, name, re.M | re.I | re.U)
@@ -19,6 +19,7 @@ def run():
     parser.add_argument("Path", type=str, help="Extract path")
     parser.add_argument("-k", "--keep", action="store_true", help="Keep beatmap after extract")
     parser.add_argument("-s", "--silent", action="store_true", help="Suppress result")
+    parser.add_argument("-m", "--minimize", action="store_true", help="Print short result instead")
 
     args = parser.parse_args();
     extract_dir = args.Path
@@ -45,7 +46,7 @@ def run():
                 folder_name = re.sub(r".osz", "", item)
                 base_name = os.path.basename(folder_name)
                 file.extractall(extract_dir + "/" + base_name)
-                success_files.append(item)
+                success_files.append(base_name)
         else:
             fail_files.append(item)
 
@@ -59,18 +60,26 @@ def run():
         return
 
     if (len(success_files) > 0):
-        print("Successful extract beatmaps : ")
-        print("------------------------------")
-        for item in success_files:
-            print(item)
-        print()
+        if args.minimize:
+            for item in success_files:
+                print(u'[\N{check mark}] ' + item)
+        else:
+            print("Successful extract beatmaps : ")
+            print("------------------------------")
+            for item in success_files:
+                print(item)
+            print()
 
     if (len(fail_files) > 0):
-        print("Fail to extract beatmaps : ")
-        print("------------------------------")
-        for item in fail_files:
-            print(item)
-        print()
+        if args.minimize:
+            for item in fail_files:
+                print('[x] ' + item)
+        else:
+            print("Fail to extract beatmaps : ")
+            print("------------------------------")
+            for item in fail_files:
+                print(item)
+            print()
 
 
 if __name__ == "__main__":

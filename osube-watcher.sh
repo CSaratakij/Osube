@@ -62,5 +62,5 @@ echo "Watching dir : $WATCH_DIR"
 echo "Extract dir : $EXTRACT_DIR"
 
 # Run Watcher
-inotifywait -m -q -e moved_to --format '%f' "$WATCH_DIR" | grep --line-buffered -o "^[0-9].*.osz" | while read -r MAP; do osube "$WATCH_DIR/$MAP" $EXTRACT_DIR; done
+inotifywait -m -q -e moved_to --format '%f' "$WATCH_DIR" | grep --line-buffered -o "^[0-9].*.osz" | while read -r MAP; do osube -m "$WATCH_DIR/$MAP" $EXTRACT_DIR; done
 
